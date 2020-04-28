@@ -1,0 +1,17 @@
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ControlePonto.Adapters.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ControlePonto.Adapters.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ControlePonto.Core.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ControlePonto.Core.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\obj\Debug\ControlePonto.Adapters.csprojAssemblyReference.cache
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\obj\Debug\ControlePonto.Adapters.csproj.CoreCompileInputs.cache
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\obj\Debug\ControlePonto.Adapters.csproj.CopyComplete
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\obj\Debug\ControlePonto.Adapters.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\obj\Debug\ControlePonto.Adapters.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ClosedXML.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ExcelNumberFormat.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\System.IO.Packaging.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ClosedXML.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ClosedXML.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ExcelNumberFormat.xml
