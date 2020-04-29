@@ -18,5 +18,7 @@ namespace ControlePonto.Core.Contracts
         void Discolor(int lineNumber);
         T Get<T>(int row, int column);
         TimeSpan GetFromHours(int row, int column);
+        int GetLineNumberFrom(string value);
+        int AmountRowsUsed();
     }
 }

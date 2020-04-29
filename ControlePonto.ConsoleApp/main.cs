@@ -40,7 +40,7 @@ namespace ControlePonto.ConsoleApp
         {
             int diaAtual = DateTime.Now.Day;
             int ultimoDiaDesteMes = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
-            int diaEnvioPlanilha = 28;//ultimoDiaDesteMes;
+            int diaEnvioPlanilha = 29;//ultimoDiaDesteMes;
             if (diaAtual == diaEnvioPlanilha)
             {
                 btnEnviarPonto.Enabled = true;
@@ -53,6 +53,9 @@ namespace ControlePonto.ConsoleApp
             try
             {
                 _excelService = new ExcelService(caminhoPlanilha);
+                IExcelService _excelServiceAD = new ExcelService(@"..\..\Resources\ad.xlsx");
+
+                _ADService = new ADService(_excelServiceAD);
                 var email = _authService.GetLoggedUser();
                 var configurarPlanilhaRequestUseCase = new ConfigurarPlanilhaInteractor(_excelService, _ADService);
                 var ConfigurarPlanilhaRequestMessage = new ConfigurarPlanilhaRequestMessage(email, "Horários");

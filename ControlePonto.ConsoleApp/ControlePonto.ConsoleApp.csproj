@@ -75,6 +75,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\ad.xlsx" />
     <None Include="Resources\controle_ponto.xlsx" />
     <None Include="Resources\controle_ponto2.xlsx" />
     <None Include="Resources\controle_ponto3.xlsx" />

@@ -40,6 +40,27 @@ namespace ControlePonto.Adapters.Gateways
             }
             return null;
         }
+
+        public IXLCell GetCellFrom(string value, int sheet)
+        {
+            var ws = _xLWorkbook.Worksheet(sheet);
+
+            int rowsUsed = ws.RowsUsed().Count();
+            int columnsUsed = ws.ColumnsUsed().Count();
+
+            for (int row = 1; row < rowsUsed; row++)
+            {
+                for (int column = 1; column <= columnsUsed; column++)
+                {
+                    string cellValue = ws.Cell(row, column).Value.ToString();
+                    if (cellValue.Replace(" ", "") == value.Replace(" ", ""))
+                    {
+                        return ws.Cell(row, column);
+                    }
+                }
+            }
+            return null;
+        }
         public IExcelService Write(string value)
         {
             _currentText = value;
@@ -59,6 +80,7 @@ namespace ControlePonto.Adapters.Gateways
             _currentSheet = nameSheet;
             return this;
         }
+
         public string GetAfter(string cellLocation)
         {
             var ws = _xLWorkbook.Worksheet(_currentSheet);
@@ -117,6 +139,18 @@ namespace ControlePonto.Adapters.Gateways
             {
                 return false;
             }
+        }
+
+        public int GetLineNumberFrom(string value)
+        {
+            var row = GetCellFrom(value, _currentSheet);
+            return row.Address.RowNumber;
+        }
+
+        public int AmountRowsUsed()
+        {
+            var ws = _xLWorkbook.Worksheet(_currentSheet);
+            return ws.RowsUsed().Count();
         }
     }
 }

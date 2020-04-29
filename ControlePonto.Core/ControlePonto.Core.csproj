@@ -45,6 +45,7 @@
     <Compile Include="Contracts\DomainEventBase.cs" />
     <Compile Include="Contracts\EntityBase.cs" />
     <Compile Include="Contracts\IAuthService.cs" />
+    <Compile Include="Contracts\IEmailService.cs" />
     <Compile Include="Contracts\IExcelService.cs" />
     <Compile Include="Contracts\IPlanilhaRepository.cs" />
     <Compile Include="Contracts\IPontoRepository.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="Contracts\ResponseMessage.cs" />
     <Compile Include="Dto\ConfigurarPlanilhaRequestMessage.cs" />
     <Compile Include="Dto\ConfigurarPlanilhaResponseMessage.cs" />
+    <Compile Include="Dto\EnviarPlanilhasRequestMessage.cs" />
+    <Compile Include="Dto\EnviarPlanilhasResponseMessage.cs" />
     <Compile Include="Dto\EnviarPontoRequestMessage.cs" />
     <Compile Include="Dto\EnviarPontoResponseMessage.cs" />
     <Compile Include="Entities\Planilha.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseCases\ConfigurarPlanilhaInteractor.cs" />
+    <Compile Include="UseCases\EnviarPlanilhasInteractor.cs" />
     <Compile Include="UseCases\EnviarPontoInteractor.cs" />
   </ItemGroup>
   <ItemGroup />

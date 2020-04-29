@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Gateways\ADService.cs" />
     <Compile Include="Gateways\AuthService.cs" />
+    <Compile Include="Gateways\EmailService.cs" />
     <Compile Include="Gateways\ExcelService.cs" />
     <Compile Include="Gateways\PlanilhaRepository.cs" />
     <Compile Include="Gateways\PontoRepository.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="Presentation\ConfigurarPlanilhaResponseViewModel.cs" />
     <Compile Include="Presentation\EnviarPontoResponsePresenter.cs" />
     <Compile Include="Presentation\EnviarPontoResponseViewModel.cs" />
+    <Compile Include="Presentation\Presenter.cs" />
+    <Compile Include="Presentation\ResponseViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

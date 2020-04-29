@@ -12,7 +12,7 @@ namespace ControlePonto.Adapters.Gateways
     {
         public string GetLoggedUser()
         {
-            return Environment.UserName;
+            return Environment.UserName+"@bernhoeft.com.br";
         }
     }
 }

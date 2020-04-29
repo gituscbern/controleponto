@@ -1,9 +1,5 @@
 ﻿using ControlePonto.Core.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControlePonto.Core.Contracts
 {
@@ -12,5 +8,6 @@ namespace ControlePonto.Core.Contracts
         Planilha GetMe();
         void Save(Planilha planilha);
         bool IsSaved(Planilha planilha);
+        List<Planilha> GetAll();
     }
 }

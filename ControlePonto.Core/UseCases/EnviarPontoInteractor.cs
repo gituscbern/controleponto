@@ -29,7 +29,8 @@ namespace ControlePonto.Core.UseCases
             Usuario usuario = _aDService.GetByEmail(message.Email);
             List<Ponto> pontos = _pontoRepository.GetAll();
             Planilha planilha = new Planilha(usuario.Nome, usuario.Email, DateTime.Now.ToString("MMMM"), usuario.CentroCusto);
-            
+            planilha.CaminhoFonte = @"..\..\Resources\controle_ponto4.xlsx";
+
             var erros = new List<string>();
 
             foreach (var ponto in pontos)

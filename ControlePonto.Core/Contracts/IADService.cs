@@ -10,5 +10,6 @@ namespace ControlePonto.Core.Contracts
     public interface IADService
     {
         Usuario GetByEmail(string email);
+        List<Usuario> GetAll();
     }
 }

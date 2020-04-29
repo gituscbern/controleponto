@@ -3,9 +3,6 @@ using ControlePonto.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControlePonto.Adapters.Gateways
 {
@@ -38,9 +35,31 @@ namespace ControlePonto.Adapters.Gateways
         public void Save(Planilha planilha)
         {
             string currentPathLevel = GetFinalLevel(planilha);
-            string destFileName = Path.Combine(currentPathLevel, planilha.NomeArquivo + ".xlsx");
+            string destFileName = Path.Combine(currentPathLevel, planilha.NomeArquivo + ".xlsm");
             Directory.CreateDirectory(currentPathLevel);
-            File.Copy(_inputSource, destFileName,true);
+            File.Copy(planilha.CaminhoFonte/*_inputSource*/, destFileName,true);
+        }
+
+        public List<Planilha> GetAll()
+        {
+            List<Planilha> planilhas = new List<Planilha>();
+
+            string[] dirsMonths = Directory.GetDirectories(_inputSource);
+            foreach (var directory in dirsMonths)
+            {
+                string[] dirsCC = Directory.GetDirectories(directory);
+                foreach (var ccDirectory in dirsCC)
+                {
+                    string[] sheetFiles = Directory.GetFiles(ccDirectory);
+                    foreach (var sheet in sheetFiles)
+                    {
+                        Planilha planilha = new Planilha() { CaminhoFonte = sheet };
+                        planilhas.Add(planilha);
+                    }
+                }
+            }
+
+            return planilhas;
         }
 
         /// <summary>
