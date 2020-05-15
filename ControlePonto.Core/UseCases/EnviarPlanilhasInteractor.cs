@@ -4,6 +4,7 @@ using ControlePonto.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace ControlePonto.Core.UseCases
 {
@@ -24,32 +25,24 @@ namespace ControlePonto.Core.UseCases
         public EnviarPlanilhasResponseMessage Handle(EnviarPlanilhasRequestMessage message)
         {
             List<Usuario> usuarios = _aDService.GetAll();
-            
             List<string> errors = new List<string>();
             try
             {
                 foreach (var usuario in usuarios)
                 {
-                    DateTime data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-                    _excelService.Sheet(message.SheetName).Write(usuario.Nome).OnRight("Nome:");
-                    _excelService.Sheet(message.SheetName).Write(usuario.CentroCusto).OnRight("Área / Centro de Custo:");
-                    _excelService.Sheet(message.SheetName).Write(usuario.CargaHoraria.ToString()).OnRight("CH:");
-                    _excelService.Sheet(message.SheetName).Write(usuario.CargaHorariaSexta.ToString()).OnRight("CH Sexta:");
-                    _excelService.Sheet(message.SheetName).Write(data.ToString("dd/MM/yyyy")).OnRight("Mês:");
+                        DateTime data = new DateTime(DateTime.Now.Year, DateTime.Now./*AddMonths(-1).*/Month, 1);   //REMOVER MÊS DE ABRIL
+                        _excelService.Sheet(message.SheetName).Write(usuario.Nome).OnRight("Nome:");
+                        _excelService.Sheet(message.SheetName).Write(usuario.CentroCusto).OnRight("Área / Centro de Custo:");
+                        _excelService.Sheet(message.SheetName).Write(usuario.CargaHoraria.ToString()).OnRight("CH:");
+                        _excelService.Sheet(message.SheetName).Write(usuario.CargaHorariaSexta.ToString()).OnRight("CH Sexta:");
+                        _excelService.Sheet(message.SheetName).Write(data.ToString("dd/MM/yyyy")).OnRight("Mês:");
 
-                    Planilha planilha = new Planilha(usuario.Nome, usuario.Email, DateTime.Now.ToString("MMMM"), usuario.CentroCusto);
-                    //planilha.CaminhoFonte = @"C:\Ponto\" + planilha.NomeArquivo + ".xlsm";
-                    planilha.CaminhoFonte = @"..\..\Resources\controle_ponto.xlsm";
-                    bool saved = _excelService.Save();
-                    //_planilhaRepository.Save(planilha);
-                    _emailService.SendEmail(planilha);
+                        Planilha planilha = new Planilha(usuario.Nome, usuario.Email, DateTime.Now./*AddMonths(-1).*/ToString("MMMM"), usuario.CentroCusto);    //REMOVER MêS DE ABRIL
+                        planilha.CaminhoFonte = @"C:\Ponto\" + planilha.NomeArquivo + ".xlsm";
+                        bool saved = _excelService.SaveAs(planilha.CaminhoFonte);
+
+                        _emailService.SendEmail("Planilha Controle de ponto", planilha.NomeArquivo, new List<string>() { usuario.Email }, planilha, @"..\..\Resources\Fique atento_Planilha Ponto Maio.jpg");  //REMOVER MES DE ABRIL
                 }
-
-                //List<Planilha> planilhas = _planilhaRepository.GetAll();
-                //foreach (var planilha in planilhas)
-                //{
-                //    _emailService.SendEmail(planilha);
-                //}
             }
             catch (Exception ex)
             {

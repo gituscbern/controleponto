@@ -17,7 +17,7 @@ namespace ControlePonto.Core.Entities
 
         public Planilha(string nome, string dominio, string mes, string centroCusto)
         {
-            NomeArquivo = nome.Replace(" ", string.Empty) + "_" + dominio.Replace("@bernhoeft.com.br","") + "_" + mes + "_" + centroCusto;
+            NomeArquivo = nome.Replace(" ", string.Empty) + "_" + dominio.ToLower().Replace("@bernhoeft.com.br","") + "_" + mes + "_" + centroCusto;
         }
 
         public Planilha()
@@ -28,6 +28,20 @@ namespace ControlePonto.Core.Entities
         {
             string[] vs = planilha.NomeArquivo.Split('_');
             return vs[3];
+        }
+
+        public static string NomeMes(Planilha planilha)
+        {
+            string[] vs = planilha.NomeArquivo.Split('_');
+            if (vs.Count() == 4)
+            {
+                return vs[2];
+            }
+            else
+            {
+                return vs[2].Substring(0,1);
+            }
+            
         }
     }
 }

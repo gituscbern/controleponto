@@ -15,3 +15,17 @@ C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Closed
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ClosedXML.xml
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\ExcelNumberFormat.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Engines\MailGridEngineConfiguration.json
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Bernhoeft.Core.Mail.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Newtonsoft.Json.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.Auth.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.IdentityModel.Extensions.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\Microsoft.Exchange.WebServices.Auth.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\HtmlAgilityPack.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\HtmlAgilityPack.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Adapters\bin\Debug\HtmlAgilityPack.xml

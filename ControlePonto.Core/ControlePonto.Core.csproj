@@ -52,19 +52,30 @@
     <Compile Include="Contracts\IRequest.cs" />
     <Compile Include="Contracts\IRequestHandler.cs" />
     <Compile Include="Contracts\ResponseMessage.cs" />
+    <Compile Include="Dto\BaixarPlanilhaRequestMessage.cs" />
+    <Compile Include="Dto\BaixarPlanilhaResponseMessage.cs" />
     <Compile Include="Dto\ConfigurarPlanilhaRequestMessage.cs" />
     <Compile Include="Dto\ConfigurarPlanilhaResponseMessage.cs" />
     <Compile Include="Dto\EnviarPlanilhasRequestMessage.cs" />
     <Compile Include="Dto\EnviarPlanilhasResponseMessage.cs" />
     <Compile Include="Dto\EnviarPontoRequestMessage.cs" />
     <Compile Include="Dto\EnviarPontoResponseMessage.cs" />
+    <Compile Include="Dto\ExtrairCalculoRequestMessage.cs" />
+    <Compile Include="Dto\ExtrairCalculoResponseMessage.cs" />
+    <Compile Include="Dto\ExtrairColaboradoresPendentesRequestMessage.cs" />
+    <Compile Include="Dto\ExtrairColaboradoresPendentesResponseMessage.cs" />
+    <Compile Include="Dto\ValidationResult.cs" />
     <Compile Include="Entities\Planilha.cs" />
     <Compile Include="Entities\Ponto.cs" />
+    <Compile Include="Entities\Relatorio.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UseCases\BaixarPlanilhaInteractor.cs" />
     <Compile Include="UseCases\ConfigurarPlanilhaInteractor.cs" />
     <Compile Include="UseCases\EnviarPlanilhasInteractor.cs" />
     <Compile Include="UseCases\EnviarPontoInteractor.cs" />
+    <Compile Include="UseCases\ExtrairCalculoInteractor.cs" />
+    <Compile Include="UseCases\ExtrairColaboradoresPendentesInteractor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

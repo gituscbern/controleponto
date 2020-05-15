@@ -11,5 +11,6 @@ namespace ControlePonto.Core.Contracts
     {
         List<Ponto> GetAll();
         void Save(Ponto ponto);
+        void SetSource(IExcelService excelService);
     }
 }

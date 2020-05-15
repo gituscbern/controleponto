@@ -34,6 +34,12 @@ namespace ControlePonto.Adapters.Gateways
             return GetUsuario(row);
         }
 
+        public Usuario GetByName(string UsuarioName)
+        {
+            int row = _excelService.Sheet("DrmjRIhEQ9Il3sn").GetLineNumberFrom(UsuarioName);
+            return GetUsuario(row);
+        }
+
         public List<Usuario> GetAll()
         {
             List<Usuario> usuarios = new List<Usuario>();

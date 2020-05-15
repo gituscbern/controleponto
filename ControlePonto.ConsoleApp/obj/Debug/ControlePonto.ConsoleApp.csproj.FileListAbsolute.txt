@@ -20,3 +20,7 @@ C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\Clos
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\ClosedXML.xml
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\ExcelNumberFormat.xml
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\Engines\MailGridEngineConfiguration.json
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\Bernhoeft.Core.Mail.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.ConsoleApp\bin\Debug\Newtonsoft.Json.xml

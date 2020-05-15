@@ -11,13 +11,22 @@ namespace ControlePonto.Adapters.Gateways
     public class ExcelService : IExcelService
     {
         private XLWorkbook _xLWorkbook;
-
         private string _currentText;
         private string _currentSheet;
+
+        public ExcelService()
+        {
+
+        }
 
         public ExcelService(string workbookPath)
         {
             _xLWorkbook = new XLWorkbook(workbookPath);
+        }
+
+        public void SetSource(string sourcePath)
+        {
+            _xLWorkbook = new XLWorkbook(sourcePath);
         }
 
         public IXLCell GetCellFrom(string value, string sheet)
@@ -27,7 +36,7 @@ namespace ControlePonto.Adapters.Gateways
             int rowsUsed = ws.RowsUsed().Count();
             int columnsUsed = ws.ColumnsUsed().Count();
 
-            for (int row = 1; row < rowsUsed; row++)
+            for (int row = 2; row <= rowsUsed; row++)
             {
                 for (int column = 1; column <= columnsUsed; column++)
                 {
@@ -75,6 +84,13 @@ namespace ControlePonto.Adapters.Gateways
 
             ws.Cell(row, column).Value = _currentText;
         }
+
+        public void On(int row, int column)
+        {
+            var ws = _xLWorkbook.Worksheet(_currentSheet);
+            ws.Cell(row, column).Value = _currentText;
+        }
+
         public IExcelService Sheet(string nameSheet)
         {
             _currentSheet = nameSheet;
@@ -101,7 +117,9 @@ namespace ControlePonto.Adapters.Gateways
         {
             var ws = _xLWorkbook.Worksheet(_currentSheet);
 
-            if (ws.Cell(row, column).Value.ToString() == "") return TimeSpan.Zero;
+            //if (ws.Cell(row, column).Value.ToString() == "") return TimeSpan.Zero;
+            if (ws.Cell(row, column).Value is string a) return TimeSpan.Zero;
+            if (ws.Cell(row, column).Value is DateTime dt) return ((DateTime)ws.Cell(row, column).Value).TimeOfDay;
 
             return TimeSpan.FromDays(Convert.ToDouble(ws.Cell(row, column).Value));
         }
@@ -151,6 +169,28 @@ namespace ControlePonto.Adapters.Gateways
         {
             var ws = _xLWorkbook.Worksheet(_currentSheet);
             return ws.RowsUsed().Count();
+        }
+
+        public void CleanSheet(int from)
+        {
+            var ws = _xLWorkbook.Worksheet(_currentSheet);
+            int rowsUsedAmount = ws.RowsUsed().Count();
+            int columnsUsedAmount = ws.ColumnsUsed().Count();
+
+            for (int row = from; row <= rowsUsedAmount; row++)
+            {
+                for (int column = 1; column <= columnsUsedAmount; column++)
+                {
+                    ws.Cell(row, column).Value = "";
+                }
+            }
+        }
+
+        public void Create(string workbookName, string sheetName)
+        {
+            _xLWorkbook = new XLWorkbook();
+            _xLWorkbook.Worksheets.Add(sheetName);
+            _currentSheet = sheetName;
         }
     }
 }

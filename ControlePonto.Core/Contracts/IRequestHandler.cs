@@ -35,4 +35,18 @@ namespace ControlePonto.Core.Contracts
         /// <param name="message">The request message</param>
         void Handle(TRequest message);
     }
+
+    /// <summary>
+    /// Defines a handler for a request without a return value
+    /// </summary>
+    /// <typeparam name="TRequest">The type of request being handled</typeparam>
+    public interface IResponseHandler<out TResponse>
+        where TResponse : ResponseMessage
+    {
+        /// <summary>
+        /// Handles a request
+        /// </summary>
+        /// <param name="message">The request message</param>
+        TResponse Handle();
+    }
 }

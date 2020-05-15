@@ -1,0 +1,13 @@
+
+  {
+    "Host": "grid171.mailgrid.com.br",
+    "Port": "587",
+    "EnableSsl": "false",
+    "DeliveryMethod": "0",
+    "UseDefaultCredentials": "false",
+    "Credentials": {
+      "userName": "smtp1@techvirtus.com.br",
+      "password": "m4h45nmd32"
+    }
+  }
+

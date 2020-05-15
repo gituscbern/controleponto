@@ -11,5 +11,6 @@ namespace ControlePonto.Core.Contracts
     {
         Usuario GetByEmail(string email);
         List<Usuario> GetAll();
+        Usuario GetByName(string UsuarioName);
     }
 }

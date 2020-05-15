@@ -9,5 +9,7 @@ namespace ControlePonto.Core.Contracts
         void Save(Planilha planilha);
         bool IsSaved(Planilha planilha);
         List<Planilha> GetAll();
+        List<Planilha> GetByMonth(int monthNumber);
+        void DeleteAll();
     }
 }

@@ -1,6 +1,6 @@
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\bin\Debug\ControlePonto.Core.dll
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\bin\Debug\ControlePonto.Core.pdb
-C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\obj\Debug\ControlePonto.Core.csprojAssemblyReference.cache
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\obj\Debug\ControlePonto.Core.csproj.CoreCompileInputs.cache
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\obj\Debug\ControlePonto.Core.dll
 C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\obj\Debug\ControlePonto.Core.pdb
+C:\Projetos Git\ControlePonto.ConsoleApp\ControlePonto.Core\obj\Debug\ControlePonto.Core.csprojAssemblyReference.cache
