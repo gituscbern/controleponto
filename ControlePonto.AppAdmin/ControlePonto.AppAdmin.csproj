@@ -24,8 +24,8 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.githubusercontent.com/gituscbern/controleponto/master/ControlePonto.AppAdmin/publish/</InstallUrl>
-    <UpdateUrl>https://raw.githubusercontent.com/gituscbern/controleponto/master/ControlePonto.AppAdmin/ControlePonto.AppAdmin/publish/</UpdateUrl>
-    <ApplicationRevision>0</ApplicationRevision>
+    <UpdateUrl>https://raw.githubusercontent.com/gituscbern/controleponto/master/ControlePonto.AppAdmin/publish/</UpdateUrl>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
